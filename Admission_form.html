@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #777;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button <a href="http://127.0.0.1:3000/c:/Abhishek Document/Html Practical/practicals/RC_Homepage.html"
+    class="mr-5 hover:text-blue-900">Home Page</a></button>
+    <h1>Admission Form</h1>
+    <form action="process_form.php" method="post">
+        <div class="form-group">
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" required>
+            <label for="Father_name">Father Name</label>
+            <input type="text" id="Father_name" name="Father_name" required>
+            <label for="Mother_name">Mother Name</label>
+            <input type="text" id="Mother_name" name="Mother_name" required>
+            <label for="Aadhaar_No.">Aadhaar No. </label>
+            <input type="number" id="Aadhaar_No." name="Aadhaar_No." required>
+        </div>
+
+        <div class="form-group">
+            <label for="email" >Email</label>
+            <input type="text" id="email" name="email" aria-placeholder="abc@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <label for="Confirm_password">Confirm Password</label>
+            <input type="Confirm_password" id="Confirm_password" name="Confirm_password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Select Course</label>
+            <select id="course" name="course">
+                <option value="Select_course">Select course</option>
+                <option value="computer_science">Computer Science</option>
+                <option value="business_admin">Business Administration</option>
+                <option value="psychology">Psychology</option>
+                <option value="B.A. Program">B.A. Program</option>
+                <option value="Environment Science">Environment Science</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="radio" id="male" name="gender" value="male"> Male
+            <input type="radio" id="female" name="gender" value="female"> Female
+            <input type="radio" id="other" name="gender" value="other"> Other
+        </div>
+
+        <div class="form-group">
+            <label>Interests</label>
+            <input type="checkbox" id="coding" name="interests[]" value="coding"> Coding
+            <input type="checkbox" id="reading" name="interests[]" value="reading"> Reading
+            <input type="checkbox" id="sports" name="interests[]" value="sports"> Sports
+        </div>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</div>
+
+</body>
+</html>
