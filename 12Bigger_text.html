@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+</head>
+<body>
+    <div id="textElement">Bigger Text</div>
+
+    <script>
+        let fontSize = 10;
+        let increasing = true;
+
+        function animateText() {
+            const textElement = document.getElementById('textElement');
+
+            if (increasing) {
+                fontSize += 1;
+                textElement.style.fontSize = `${fontSize}pt`;
+                textElement.style.color = 'red';
+
+                if (fontSize >= 50) {
+                    textElement.textContent = 'Smaller Text';
+                    textElement.style.color = 'green';
+                    increasing = false;
+                }
+            } else {
+                fontSize -= 1;
+                textElement.style.fontSize = `${fontSize}pt`;
+
+                if (fontSize <= 5) {
+                    clearInterval(animationInterval);
+                }
+            }
+        }
+
+        const animationInterval = setInterval(animateText, 10);
+    </script>
+</body>
+</html>
