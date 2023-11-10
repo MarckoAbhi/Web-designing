@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Name Parser</title>
+    <script>
+        function parseFullName() {
+            // Get the full name from the input field
+            const fullName = document.getElementById('fullName').value.trim();
+
+            // Split the full name into an array of words
+            const nameArray = fullName.split(' ');
+
+            // Display the first name
+            const firstNameLabel = document.getElementById('firstName');
+            firstNameLabel.textContent = nameArray.length > 0 ? nameArray[0] : 'NA';
+
+            // Display the middle name
+            const middleNameLabel = document.getElementById('middleName');
+            middleNameLabel.textContent = nameArray.length > 2 ? nameArray.slice(1, -1).join(' ') : 'NA';
+
+            // Display the last name
+            const lastNameLabel = document.getElementById('lastName');
+            lastNameLabel.textContent = nameArray.length > 1 ? nameArray[nameArray.length - 1] : 'NA';
+        }
+    </script>
+</head>
+<body>
+    <h2>Full Name Parser</h2>
+
+    <label for="fullName">Enter Full Name:</label>
+    <input type="text" id="fullName" placeholder="Krishna"><br>
+    <!-- <label for="Middle Name" >Enter Middle Name:</label>
+    <input type="text" id="middleName" placeholder="Kumar">
+    <label for="last Name" >Last Name:</label>
+    <input type="text" id="lastName" placeholder="Kumar"> -->
+
+
+
+    <button onclick="parseFullName()">Parse</button>
+
+    <h3>Result:</h3>
+    <p>First Name: <span id="firstName">NA</span></p>
+    <p>Middle Name: <span id="middleName">NA</span></p>
+    <p>Last Name: <span id="lastName">NA</span></p>
+</body>
+</html>
