@@ -1,34 +1,14 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title >Display Current Day and Time</title>
-</head>
-
 <body>
 
-    <h1 ">Current Day and Time</h1>
+<h2>My Displaythecurrentdateandtime</h2>
+<p1>Using javascript </p1>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
 
-    <p id="datetime"></p>
-
-    <script>
-
-        function updateDateTime() {
-            const dateTimeElement = document.getElementById("datetime");
-            const now = new Date();
-
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-            const formattedDate = now.toLocaleDateString('en-US', options);
-
-            dateTimeElement.textContent = formattedDate;
-        }
-
-        // Call the function to update date and time immediately and set it to update every second (1000 milliseconds)
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-
-    </script>
+<p id="demo"></p>
 
 </body>
-
-</html>
+</html> 
