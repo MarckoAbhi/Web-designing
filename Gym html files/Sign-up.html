@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:url(bg1.jpg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #Login-form {
+            background:url(bg.jpg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #cfbebe;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+
+
+
+<body> 
+    
+    <header><h1 style="text-align: center;">
+       <button> <nav 
+  class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-aqua-400	flex flex-wrap items-center text-base justify-center">
+  <a href="http://127.0.0.1:3000/Gym.html"
+    class="mr-5 hover:text-blue-900 "><b><u>Home</u></b></a>
+      </nav>
+      </button><br>
+
+    Login in to access our facilty
+</h1>
+    
+    <div id="Login-form">
+        <h2>Login </h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <button onclick="signup()">Login</button>
+    </div>
+
+    <script>
+        function signup() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Perform signup logic (you can send data to a server here)
+
+            alert('Sign up successful!'); // For demonstration purposes
+        }
+    </script>
+    <footer>
+        <p class="mb-0" style="color: black;">Copyright © 2024. All rights reserved by Marcko_fitness_gym.</p>
+    </p>
+    </footer>
+</body>
+</html>
