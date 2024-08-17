@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enrollment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e26b6b;
+        }
+        #Login-form {
+            background-color: black;
+            background-repeat: no-repeat;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background:url(bg.jpg);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #777;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        
+    </script>
+</head>
+
+<body style="background:url(bg3.jpg)">
+    <Div style="background-color: rgb(222, 191, 223);">
+       
+    </Div>
+    <button style="background-color: rgb(248, 209, 141); color:white"> <nav 
+        class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-aqua-400	flex flex-wrap items-center text-base justify-center">
+        <a href="http://127.0.0.1:3000/Gym.html"
+          class="mr-5 hover:text-blue-900 "><b><u>Home</u></b></a>
+            </nav>
+            </button><br>
+            
+    <div class="container">
+        <h1>Enrollment Form</h1>
+        <form action="process_form.php" onsubmit="return validateForm()" method="post">
+            <div class="form-group" >
+                <fieldset>
+                    <legend>Personal Information</legend>
+                <label for="full_name">Full Name:</label>
+                <input type="text" id="full_name" name="full_name" required ngModule>
+                <label for="Father_name">Father Name:</label>
+                <input type="text" id="Father_name" name="Father_name" required ngModule>
+                <label for="Mother_name">Mother Name:</label>
+                <input type="text" id="Mother_name" name="Mother_name" required ngModule>
+                <label for="Contact_No.">Contact No. </label>
+                <input type="tel" id="Contact_No." name="Contact_No." required ngModule><br>
+                <br>
+                <label for="Aadhaar_No.">Aadhaar No. </label>
+                <input type="Password" id="Aadhaar_No." name="Aadhaar_No." required ngModule>
+
+                <label for="Date of Birth">Date of Birth:</label>
+                <input type="date" id="Date of Birth" name="Date of Birth" required ngModule>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Write Your E-mail</legend>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="abc@gmail.com" required ngModule>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend>Create Username</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"  required ngModule>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Make a Password </legend>
+                    Password: <input type="password" id="myInput"><br>
+                    <input type="checkbox" onclick="myFunction()">Show Password
+                    <br>
+
+                    <script>
+                    function myFunction() {
+                      var x = document.getElementById("myInput");
+                      if (x.type === "password") {
+                        x.type = "text";
+                      } else {
+                        x.type = "password";
+                      }
+                    }
+                    </script>
+                    <br>
+                 Confirm Password: <input type="password" id="myInput" ><br>
+                </fieldset>
+            </div><br>
+            <div class="form-group">
+                <fieldset>
+                    <legend>Select Your Gender</legend>
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male"ngModule> Male
+                <input type="radio" id="female" name="gender" value="female"ngModule> Female
+                <input type="radio" id="other" name="gender" value="other"ngModule> Other
+                </fieldset>
+            </div><br>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>select type of Gym you like</legend>
+                <label for="course">Select Gym Type:</label>
+                <select id="course" name="course">
+                    <option value="Select_course"> Select Gym Type</option>
+                    <option value="Big box gym">Big box gym</option>
+                    <option value="Boutique gym">Boutique gym</option>
+                    <option value="Personal gym trainer">Personal gym trainer</option>
+                    <option value="Women's Gym">Women's Gym</option>
+                    <option value="Group fitness gym or studios">Group fitness gym or studios</option>
+                    <option value="Powerlifting gym">Powerlifting gym</option>
+                    <option value="Rock climbing gym">Rock climbing gym</option>
+                </select>
+                </fieldset>
+            </div>
+
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Select your interests</legend>
+                <label>Interests:</label>
+                <input type="checkbox" id="Sports" name="interests[]" value="Sports"ngModule> Sports
+                <input type="checkbox" id="reading" name="interests[]" value="reading"ngModule> Reading
+                <input type="checkbox" id="Coding" name="interests[]" value="Coding"ngModule> Coding
+                </fieldset>
+            </div>
+
+            <input type="submit" value="Submit"ngModule>
+            <input type="reset" value="Reset"ngModule>
+        </form>
+    </div>
+    <footer>
+        <p class="mb-0" style="color:white;">Copyright © 2024. All rights reserved by Marcko_fitness_gym.</p>
+    </p>
+    </footer>
+
+</body>
+
+</html>
