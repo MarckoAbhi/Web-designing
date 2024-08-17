@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ade480, #350fdb);
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #777;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="http://127.0.0.1:3000/d:/Abhishek Document/Html Practical/Htmprac/RC_Homepage.html"
+            style="background-color: rgb(63, 63, 216); color:white" class="mr-5 hover:text-blue-900">Home Page</a>
+        <h1>Admission Form</h1>
+        <fieldset>
+            <form action="process_form.php" onsubmit="return validateForm()" method="post">
+                <div class="form-group">
+                    <label for="full_name">Full Name</label>
+                    <input type="text" id="full_name" name="full_name" required ngModule>
+                    <label for="Father_name">Father Name</label>
+                    <input type="text" id="Father_name" name="Father_name" required ngModule>
+                    <label for="Mother_name">Mother Name</label>
+                    <input type="text" id="Mother_name" name="Mother_name" required ngModule>
+                    <label for="Aadhaar_No.">Aadhaar No. </label>
+                    <input type="password" id="Aadhaar_No." name="Aadhaar_No." required ngModule>
+                </div>
+                <pre></pre>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" aria-placeholder="abc@gmail.com" required ngModule>
+                </div>
+                <pre></pre>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required ngModule>
+                    <label for="Confirm_password">Confirm Password</label>
+                    <input type="password" id="Confirm_password" name="Confirm_password" required ngModule>
+                </div>
+                <pre></pre>
+
+                <div class="form-group">
+                    <label for="course">Select Course</label>
+                    <select id="course" name="course">
+                        <option value="Select_course">Select course</option>
+                        <option value="computer_science">Computer Science</option>
+                        <option value="business_admin">Business Administration</option>
+                        <option value="psychology">Psychology</option>
+                        <option value="B.A. Program">B.A. Program</option>
+                        <option value="Environment Science">Environment Science</option>
+                    </select>
+                </div>
+                <pre></pre>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <input type="radio" id="male" name="gender" value="male"ngModule> Male
+                    <input type="radio" id="female" name="gender" value="female" ngModule> Female
+                    <input type="radio" id="other" name="gender" value="other"ngModule> Other
+                </div>
+                <pre></pre>
+
+                <div class="form-group">
+                    <label>Interests</label>
+                    <input type="checkbox" id="coding" name="interests[]" value="coding"ngModule> Coding
+                    <input type="checkbox" id="reading" name="interests[]" value="reading"ngModule> Reading
+                    <input type="checkbox" id="sports" name="interests[]" value="sports"ngModule> Sports
+                </div>
+                <pre></pre>
+
+                <input type="submit" value="Submit" onclick>
+                <input type="reset" value="Reset">
+            </form>
+        </fieldset>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record Form</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            // Reset previous error messages
+            document.getElementById('errorFirstName').textContent = '';
+            document.getElementById('errorRollNumber').textContent = '';
+            document.getElementById('errorEmail').textContent = '';
+
+            // Get form inputs
+            const firstName = document.getElementById('firstName').value.trim();
+            const rollNumber = document.getElementById('rollNumber').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            // Validate mandatory fields
+            if (firstName === '') {
+                document.getElementById('errorFirstName').textContent = 'First Name is required';
+                return false;
+            }
+
+            if (rollNumber === '') {
+                document.getElementById('errorRollNumber').textContent = 'Roll Number is required';
+                return false;
+            }
+
+            // Validate numeric field
+            if (isNaN(rollNumber)) {
+                document.getElementById('errorRollNumber').textContent = 'Roll Number must be numeric';
+                return false;
+            }
+
+            // Validate email address
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email !== '' && !emailRegex.test(email)) {
+                document.getElementById('errorEmail').textContent = 'Invalid email address';
+                return false;
+            }
+
+            // Additional validation rules can be added here
+
+            // If all validations pass, the form is valid
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Student Record Form</h2>
+    <form onsubmit="return validateForm()">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName">
+        <span id="errorFirstName" class="error"></span>
+
+        <br>
+
+        <label for="rollNumber">Roll Number:</label>
+        <input type="text" id="rollNumber">
+        <span id="errorRollNumber" class="error"></span>
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <span id="errorEmail" class="error"></span>
+
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+</head>
+<body>
+    <div id="textElement">Bigger Text</div>
+
+    <script>
+        let fontSize = 20;
+        let increasing = true;
+
+        function animateText() {
+            const textElement = document.getElementById('textElement');
+
+            if (increasing) {
+                fontSize += 1;
+                textElement.style.fontSize = `${fontSize}pt`;
+                textElement.style.color = 'red';
+
+                if (fontSize >= 50) {
+                    textElement.textContent = 'Smaller Text';
+                    textElement.style.color = 'green';
+                    increasing = false;
+                }
+            } else {
+                fontSize -= 1;
+                textElement.style.fontSize = `${fontSize}pt`;
+
+                if (fontSize <= 5) {
+                    clearInterval(animationInterval);
+                }
+            }
+        }
+
+        const animationInterval = setInterval(animateText, 20);
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+</head>
+<body>
+
+<div id="textElement" style="color: red;">Bigger Text</div>
+
+<script>
+    var textElement = document.getElementById('textElement');
+    var fontSize = 10;
+
+    function animateText() {
+        if (fontSize <= 50) {
+            textElement.style.fontSize = fontSize + 'pt';
+            fontSize++;
+            setTimeout(animateText, 10);
+        } else if (fontSize === 51) {
+            textElement.style.color = 'green';
+            textElement.textContent = 'Smaller Text';
+            fontSize = 50;
+            setTimeout(animateText, 10);
+        } else if (fontSize >= 5) {
+            textElement.style.fontSize = fontSize + 'pt';
+            fontSize--;
+            setTimeout(animateText, 10);
+        }
+    }
+
+    animateText();
+</script>
+
+</body>
+</html> -->

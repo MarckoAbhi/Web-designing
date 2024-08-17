@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page3</title>
+</head>
+
+<body style="background-color: rgb(192, 219, 192);">
+    <h1 style="background-color: chartreuse;"><marquee behavior="alternate">This is page 3</marquee></h1><br>
+
+    <h2>First come First serve</h2>
+    <p>First Come First Serve CPU Scheduling Algorithm shortly known as FCFS is the first algorithm of CPU Process
+        Scheduling Algorithm. In First Come First Serve Algorithm what we do is to allow the process to execute in
+        linear manner.
+
+        This means that whichever process enters process enters the ready queue first is executed first. This shows that
+        First Come First Serve Algorithm follows First In First Out (FIFO) principle.
+
+        The First Come First Serve Algorithm can be executed in Pre Emptive and Non Pre Emptive manner. Before, going
+        into examples, let us understand what is Pre Emptive and Non Pre Emptive Approach in CPU Process Scheduling.</p>
+    <br>
+
+    <h2>Pre Emptive Approach</h2>
+    In this instance of Pre Emptive Process Scheduling, the OS allots the resources to a Process for a predetermined
+    period of time. The process transitions from running state to ready state or from waiting state to ready state
+    during resource allocation. This switching happens because the CPU may assign other processes precedence and
+    substitute the currently active process for the higher priority process.
+
+    <h2>Non Pre Emptive Approach</h2>
+    In this case of Non Pre Emptive Process Scheduling, the resource cannot be withdrawn from a process before the
+    process has finished running. When a running process finishes and transitions to the waiting state, resources are
+    switched.
+
+    <h2>Convoy Effect In First Come First Serve (FCFS )</h2>
+    Convoy Effect is a phenomenon which occurs in the Scheduling Algorithm named First Come First Serve (FCFS). The
+    First Come First Serve Scheduling Algorithm occurs in a way of non preemptive way.
+
+    The Non preemptive way means that if a process or job is started execution, then the operating system must complete
+    its process or job. Until, the process or job is zero the new or next process or job does not start its execution.
+    The definition of Non Preemptive Scheduling in terms of Operating System means that the Central Processing Unit
+    (CPU) will be completely dedicated till the end of the process or job started first and the new process or job is
+    executed only after finishing of the older process or job.
+
+    There may be a few cases, which might cause the Central Processing Unit (CPU) to allot a too much time. This is
+    because in the First Come First Serve Scheduling Algorithm Non Preemptive Approach, the Processes or the jobs are
+    chosen in serial order. Due, to this shorter jobs or processes behind the larger processes or jobs takes too much
+    time to complete its execution. Due, to this the Waiting Time, Turn Around Time, Completion Time is very high.
+
+</body>
+
+</html>

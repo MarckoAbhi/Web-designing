@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" type="text/css" href="6styles.css">
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <h1>Welcome to the Online Bookstore</h1>
+    <p>Click the button to display the date.</p>
+    <button onclick="displayDate()">Click Me!</button>
+
+    <script>
+        function displayDate() {
+            document.getElementById("demo").innerHTML = "Happy Birthday. wish you many many happy returns of the day.";
+        }
+    </script>
+
+    <p id="demo" style="color: rgb(226, 17, 209); font-style: italic; font-family: 'Times New Roman', Times, serif;">
+    </p>
+
+    <section>
+        <h2>Featured Books</h2>
+        <ul class="book-list">
+            <li>
+                <img src="img/book1.jpg" alt="Book 1">
+                <h3>Book Title 1</h3>
+                <p>Author: Author Name 1</p>
+            </li>
+            <li>
+                <img src="img/book2.jpg" alt="Book 2">
+                <h3>Book Title 2</h3>
+                <p>Author: Author Name 2</p>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Video Introduction</h2>
+        <video width="640" height="360" controls>
+            <source src="videos/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <h2>Book Categories</h2>
+        <ul>
+            <li><a href="category1.html">Category 1</a></li>
+            <li><a href="category2.html">Category 2</a></li>
+            <li><a href="category3.html">Category 3</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Newsletter Signup</h2>
+        <form action="subscribe.php" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </section>
+
+    <section>
+        <h2>Best Sellers</h2>
+        <table class="book-table">
+            <tr>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Book Title 1</td>
+                <td>Author Name 1</td>
+                <td>$19.99</td>
+            </tr>
+            <tr>
+                <td>Book Title 2</td>
+                <td>Author Name 2</td>
+                <td>$24.99</td>
+            </tr>
+        </table>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Online Bookstore</p>
+    </footer>
+</body>
+
+</html>

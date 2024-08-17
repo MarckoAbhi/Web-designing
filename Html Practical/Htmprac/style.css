@@ -1,0 +1,111 @@
+
+        #toggleButton {
+            display: none;
+            /* Initially hide the button */
+        }
+
+        .header {
+            text-align: center;
+            font-size: 24px;
+            background-color: rgba(111, 243, 243, 0.785);
+
+        }
+
+        body {
+            background: #E3E6E3;
+            font-family: helvetica, "Segoe UI", Arial, sans-serif;
+            color: #222;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 5px;
+        }
+
+        footer {
+            color: #fff;
+            padding: 100px 0 30px;
+
+            width: 100%;
+            background: linear-gradient(to right, #ade480, #233fbd);
+            position: absolute;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: justify;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .affix+.container-fluid {
+            padding-top: 70px;
+        }
+
+        ul {
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(15, 8, 5);
+        }
+
+        li {
+            float: left;
+        }
+
+        li,
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .column {
+            float: left;
+            width: 30.33%;
+            padding: 10px;
+        }
+
+        .col {
+            flex-basis: 15%;
+            padding: 10px;
+            width: 50%;
+        }
+
+        .ro {
+            width: 85%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+ 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page2</title>
+    <style>
+        h1{
+            background-color: rgb(240, 172, 253);
+        }
+        body{
+            background-color: rgb(213, 227, 241);
+        }
+    </style>
+</head>
+
+<body><header>
+    <h1>This is Page 2</h1></header>
+    <h2>Process State in OS</h2>
+    <p>
+       <h3> 1. New</h3>
+        A program which is going to be picked up by the OS into the main memory is called a new process.
+
+       <h3> 2. Ready</h3>
+        Whenever a process is created, it directly enters in the ready state, in which, it waits for the CPU to be
+        assigned. The OS picks the new processes from the secondary memory and put all of them in the main memory.
+
+        The processes which are ready for the execution and reside in the main memory are called ready state processes.
+        There can be many processes present in the ready state.
+
+       <h3> 3. Running</h3>
+        One of the processes from the ready state will be chosen by the OS depending upon the scheduling algorithm.
+        Hence, if we have only one CPU in our system, the number of running processes for a particular time will always
+        be one. If we have n processors in the system then we can have n processes running simultaneously.
+
+       <h3> 4. Block or wait</h3>
+        From the Running state, a process can make the transition to the block or wait state depending upon the
+        scheduling algorithm or the intrinsic behavior of the process.
+
+        When a process waits for a certain resource to be assigned or for the input from the user then the OS move this
+        process to the block or wait state and assigns the CPU to the other processes.
+
+       <h3> 5. Completion or termination</h3>
+        When a process finishes its execution, it comes in the termination state. All the context of the process
+        (Process Control Block) will also be deleted the process will be terminated by the Operating system.
+
+       <h3> 6. Suspend ready</h3>
+        A process in the ready state, which is moved to secondary memory from the main memory due to lack of the
+        resources (mainly primary memory) is called in the suspend ready state.
+
+        If the main memory is full and a higher priority process comes for the execution then the OS have to make the
+        room for the process in the main memory by throwing the lower priority process out into the secondary memory.
+        The suspend ready processes remain in the secondary memory until the main memory gets available.
+
+        <h3>7. Suspend wait</h3>
+        Instead of removing the process from the ready queue, it's better to remove the blocked process which is waiting
+        for some resources in the main memory. Since it is already waiting for some resource to get available hence it
+        is better if it waits in the secondary memory and make room for the higher priority process. These processes
+        complete their execution once the main memory gets available and their wait is finished.
+
+
+    </p>
+</body>
+
+</html>
