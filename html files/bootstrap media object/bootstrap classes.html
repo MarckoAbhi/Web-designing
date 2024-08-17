@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   <!--for tooltip-->
+});
+</script>
+</head>
+<body>
+
+<div class="container">
+
+<!--bootstrap Alerts-->
+  <h2>Alerts</h2>
+  <div class="alert alert-success">
+    <strong>Success!</strong>successful or positive action.
+  </div>
+  <div class="alert alert-info">
+    <strong>Info!</strong>neutral informative change or action.
+  </div>
+  <div class="alert alert-warning">
+    <strong>Warning!</strong>warning that might need attention.
+  </div>
+  <div class="alert alert-danger">
+    <strong>Danger!</strong>dangerous or potentially negative action.
+  </div>
+  
+  <div class="alert alert-success">
+  <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.			<!--alert-link-->
+</div>
+  <!--bootstrap Alerts end -->
+  
+  <br><br><br>
+  <!--bootstrap buttons -->
+  <h2>Button Styles</h2>
+  <button type="button" class="btn">Basic</button>
+  <button type="button" class="btn btn-default">Default</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-link">Link</button> 
+  
+  <button type="button" class="btn btn-primary btn-xs">Large</button>				<!-- .btn-sm,xs,md -->
+  <!--bootstrap buttons end  -->
+  <br><br><br>
+  
+  <!--bootstrap badges  -->
+  <h2>Badges</h2>
+  <a href="#">friend request <span class="badge">2</span></a><br>
+  <a href="#">notifications <span class="badge">10</span></a><br>
+ 
+  <!--bootstrap badges end  -->
+  <br><br><br>
+  
+  <!--bootstrap Collapsible  -->
+  
+   <h2>Bootstrap Collapsible</h2>
+  <p>Click on the button</p>
+  <!--<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#div1">Bootstrap collapsible</button>--><a href="#div1" data-toggle="collapse">Collapsible</a>
+  <div id="div1" class="collapse">
+    <p>Toggle between showing and hiding content. </p>
+  </div>
+  <!--bootstrap Collapsible ends  -->
+  
+  <br><br><br>
+   <!--bootstrap list  -->
+  <h2>Inline List</h2>
+  <ul class="list-inline">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+  </ul>
+  <!--bootstrap list ends -->
+  <br><br><br>
+  <!--bootstrap Tabs -->
+  
+  <h3>Bootstrap Tabs</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Home</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">submenu 1</a></li>
+        <li><a href="#">submenu 2</a></li>
+        <li><a href="#">submenu 3</a></li>                        
+      </ul>
+    </li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+  </ul>
+ 
+  <!--bootstrap Tabs ends-->
+  <br><br><br>
+  <h2>Pills</h2>
+  <ul class="nav nav-pills"> <!--nav-stacked,.nav-justified-->
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+	
+    <li><a href="#">Menu 3</a></li>
+  </ul>
+  <br><br><br>
+  <!--bootstrap Tooltip ends-->
+  <h3>Tooltip Example</h3>
+  <ul class="list-inline">
+    <li><a href="#" data-toggle="tooltip" data-placement="left" title="Hello!">Top</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Hello!">Bottom</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="left" title="Hello!">Left</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Hello!">Right</a></li>
+  </ul>
+  
+  <!--bootstrap Tooltip ends-->
+</div>
+
+</body>
+</html>

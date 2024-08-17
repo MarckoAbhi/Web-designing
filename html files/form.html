@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="form1.css">
+    <title>Form</title>
+    <style>
+        div {
+    text-align: center;
+}
+label{
+    text-align: left;
+}
+button{
+    background-color: rgb(24, 218, 57);
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="background-color: aqua;"><marquee behavior="alternate">Registratiom form </marquee></h1>
+       <form #login="ngForm" (ngSubmit)="submit(login)">
+        <div class="form-group">
+            <label for="Firstname">First Name:</label><br>
+            <input required minlength="3" maxlength="20" type="text" name="Firstname" class="form-control" ngModule>
+            <!-- <div *ngIf="name.touched &&name.invalid" class=" alert alert-danger">
+                <p *ngIf="name.erros.required">First name required!!</p>
+                <p *ngIf="minlength.erros.required">Sorry Short Firstname!!</p> -->
+            </div>
+        </div>
+        <pre></pre>
+
+            <div class="form-group">
+                <label for="Lastname">Last Name:</label><br>
+                <input required minlength="3" maxlength="10" type="text" name="Lastname" class="form-control" ngModule>
+            </div>
+            <pre></pre>
+
+                <div class="form-group">
+                    <label for="Email">Email:</label><br>
+                    <input required minlength="3" maxlength="30" type="email" name="Email" class="form-control" ngModule>
+                </div>
+                <pre></pre>
+
+                    <div class="form-group">
+                        <label for="Password">Password:</label><br>
+                        <input required minlength="6" maxlength="15" type="password" name="Password" class="form-control" ngModule>
+                    </div>
+                    <pre></pre>
+                    <div class="form-group">
+                        <label for="Password">About You:</label><br>
+                        <input required minlength="6" maxlength="15" type="textArea" name="About You" class="form-control" ngModule>
+                    </div>
+                    <pre></pre>
+                    <div>
+                    <button class="btn btn-primary" type="submit">submit</button>
+                    <button class="btn btn-secondary" type="reset">Reset</button>
+                </div>
+                   
+
+        </form>
+    </div>
+</body>
+</html>
