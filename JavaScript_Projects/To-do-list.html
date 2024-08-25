@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To-do-list</title>
+	<style>
+		.container {
+			width: 50%;
+			margin: 40px auto;
+			padding: 20px;
+			background-color: #f0f0f0;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.input-group {
+			margin-bottom: 20px;
+		}
+		.input-group input[type="text"] {
+			width: 100%;
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ccc;
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		.form-group input[type="button"] {
+			width: 100%;
+			padding: 10px;
+			font-size: 16px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.form-group input[type="button"]:hover {
+			background-color: #3e8e41;
+		}
+		#list_item {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		#list_item li {
+			padding: 10px;
+			border-bottom: 1px solid #ccc;
+		}
+		#list_item li:last-child {
+			border-bottom: none;
+		}
+		#list_item li:hover {
+			background-color: #f0f0f0;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>To-Do-List</h1>
+		<form>
+			<div class="input-group">
+				<input type="text" id="todo-item" placeholder="Todo item">
+			</div>
+			<div class="form-group">
+				<input type="button" value="Add" onclick="add_item()">
+			</div>
+		</form>
+		<ul id="list_item">
+			
+		</ul>
+	</div>
+	
+	<script type="text/javascript">
+		function add_item(){
+			let item = document.getElementById("todo-item");
+			let list_item = document.getElementById("list_item");
+			if(item.value != ""){
+				let make_li = document.createElement("li");
+				make_li.appendChild(document.createTextNode(item.value));
+				list_item.appendChild(make_li);
+				item.value = "";
+
+				make_li.onclick  = function(){
+					this.parentNode.removeChild(this);
+				}					
+			} else {
+				alert("Please add a value to the item");
+			}
+		}
+	</script>
+	
+</body>
+</html>
