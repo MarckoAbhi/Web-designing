@@ -1,0 +1,154 @@
+<html>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 min-h-screen flex">
+  <!-- Sidebar -->
+  <div class="bg-purple-900 text-white w-64 p-6">
+   <div class="text-2xl font-bold mb-8">
+    <i class="fas fa-infinity text-white text-2xl mr-2">
+    </i>
+    Dashboard
+   </div>
+   <nav>
+    <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-purple-700" href="#">
+     <i class="fas fa-tachometer-alt mr-2">
+     </i>
+     Overview
+    </a>
+    <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-purple-700" href="#">
+     <i class="fas fa-project-diagram mr-2">
+     </i>
+     Projects
+    </a>
+    <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-purple-700" href="#">
+     <i class="fas fa-tasks mr-2">
+     </i>
+     Tasks
+    </a>
+    <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-purple-700" href="#">
+     <i class="fas fa-users mr-2">
+     </i>
+     Team
+    </a>
+    <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-purple-700" href="#">
+     <i class="fas fa-cogs mr-2">
+     </i>
+     Settings
+    </a>
+   </nav>
+  </div>
+  <!-- Main Content -->
+  <div class="flex-1 p-10">
+   <div class="flex justify-between items-center mb-10">
+    <h1 class="text-3xl font-bold text-purple-900">
+     Welcome to Your Dashboard
+    </h1>
+    <button class="bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700">
+     Add New Project
+    </button>
+   </div>
+   <!-- Cards -->
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+     <div class="flex items-center justify-between mb-4">
+      <h2 class="text-xl font-bold text-purple-900">
+       Projects
+      </h2>
+      <i class="fas fa-project-diagram text-purple-600 text-2xl">
+      </i>
+     </div>
+     <p class="text-gray-700 text-lg">
+      24 Active Projects
+     </p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+     <div class="flex items-center justify-between mb-4">
+      <h2 class="text-xl font-bold text-purple-900">
+       Tasks
+      </h2>
+      <i class="fas fa-tasks text-purple-600 text-2xl">
+      </i>
+     </div>
+     <p class="text-gray-700 text-lg">
+      128 Pending Tasks
+     </p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+     <div class="flex items-center justify-between mb-4">
+      <h2 class="text-xl font-bold text-purple-900">
+       Team Members
+      </h2>
+      <i class="fas fa-users text-purple-600 text-2xl">
+      </i>
+     </div>
+     <p class="text-gray-700 text-lg">
+      12 Active Members
+     </p>
+    </div>
+   </div>
+   <!-- Recent Activity -->
+   <div class="mt-10">
+    <h2 class="text-2xl font-bold text-purple-900 mb-4">
+     Recent Activity
+    </h2>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+     <ul>
+      <li class="mb-4">
+       <p class="text-gray-700">
+        <span class="font-semibold text-purple-900">
+         John Doe
+        </span>
+        completed the task
+        <span class="font-semibold text-purple-900">
+         "Design Homepage"
+        </span>
+        .
+       </p>
+       <p class="text-gray-500 text-sm">
+        2 hours ago
+       </p>
+      </li>
+      <li class="mb-4">
+       <p class="text-gray-700">
+        <span class="font-semibold text-purple-900">
+         Jane Smith
+        </span>
+        added a new project
+        <span class="font-semibold text-purple-900">
+         "Marketing Campaign"
+        </span>
+        .
+       </p>
+       <p class="text-gray-500 text-sm">
+        5 hours ago
+       </p>
+      </li>
+      <li>
+       <p class="text-gray-700">
+        <span class="font-semibold text-purple-900">
+         Michael Brown
+        </span>
+        updated the status of
+        <span class="font-semibold text-purple-900">
+         "SEO Optimization"
+        </span>
+        to
+        <span class="font-semibold text-purple-900">
+         "In Progress"
+        </span>
+        .
+       </p>
+       <p class="text-gray-500 text-sm">
+        1 day ago
+       </p>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
