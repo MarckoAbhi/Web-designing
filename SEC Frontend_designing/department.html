@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department Webpage</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: lightpink;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        
+        /* Navigation bar */
+        nav {
+            background-color: #333;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+        }
+        nav li {
+            position: relative;
+        }
+        nav li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+        }
+        nav li a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown menu */
+        nav .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        nav .dropdown a {
+            padding: 10px 20px;
+            display: block;
+        }
+        nav .dropdown a:hover {
+            background-color: #575757;
+        }
+        nav li:hover .dropdown {
+            display: block;
+        }
+
+        /* Main content */
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Acharya Narendra Dev College</h1>
+        <h2>Welcome to the Department of Physics</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="department.html">Home</a></li>
+            <li>
+                <a href="faculty.html">Faculty</a>
+                <ul class="dropdown">
+                    <li><a href="#professors">Professors</a></li>
+                    <li><a href="#lecturers">Lecturers</a></li>
+                    <li><a href="#staff">Support Staff</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="courses.html">Courses</a>
+                <ul class="dropdown">
+                    <li><a href="#undergraduate">Undergraduate</a></li>
+                    <li><a href="#postgraduate">Postgraduate</a></li>
+                    <li><a href="#shortterm">Short-term</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="activities.html">Activities</a>
+                <ul class="dropdown">
+                    <li><a href="#workshops">Workshops</a></li>
+                    <li><a href="#seminars">Seminars</a></li>
+                    <li><a href="#events">Events</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>About Us</h2>
+        <p>
+            Welcome to the Department of Physics. Our department is committed to providing 
+            quality education and fostering research in quantum Physics.
+        </p>
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Highly qualified faculty</li>
+            <li>State-of-the-art infrastructure</li>
+            <li>Innovative curriculum</li>
+            <li>Opportunities for research and internships</li>
+        </ul>
+    </main>
+
+    <footer>
+        &copy; 2024 Department of Physics. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Website</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: lightyellow;
+        }
+        #topFrame {
+            height: 20%;
+            width: 100%;
+            border: none;
+        }
+        #content {
+            display: flex;
+            height: 80%;
+        }
+        #leftFrame {
+            flex: 3; 
+            border: none;
+        }
+        #rightFrame {
+            flex: 7; 
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="topFrame" src="top.html"></iframe>
+    <div id="content">
+        <iframe id="leftFrame" src="left.html"></iframe>
+        <iframe id="rightFrame" src="home.html"></iframe>
+    </div>
+</body>
+</html>

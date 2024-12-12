@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color:lightblue;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Student Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="roll">Roll Number:</label>
+        <input type="text" id="roll" placeholder="Enter 7-digit roll number">
+        <div class="error" id="rollError"></div>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <div class="error" id="nameError"></div>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <div class="error" id="genderError"></div>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+        <div class="error" id="dobError"></div>
+
+        <label for="courses">Course:</label>
+        <select id="courses">
+            <option value="">Select a course</option>
+            <option value="">Bsc(H) Physics</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="M.Tech">M.Tech</option>
+            <option value="MBA">MBA</option>
+        </select>
+        <div class="error" id="courseError"></div>
+
+        <label>Skills:</label>
+        <input type="checkbox" id="html" value="HTML"> HTML
+        <input type="checkbox" id="css" value="CSS"> CSS
+        <input type="checkbox" id="js" value="JavaScript"> JavaScript
+        <div class="error" id="skillsError"></div>
+
+        <label for="address">Address:</label>
+        <textarea id="address" placeholder="Enter your address"></textarea>
+        <div class="error" id="addressError"></div>
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            const roll = document.getElementById('roll').value;
+            const rollError = document.getElementById('rollError');
+            if (!/^\d{7}$/.test(roll)) {
+                rollError.textContent = "Roll number must be a 7-digit numeric value.";
+                isValid = false;
+            } else {
+                rollError.textContent = "";
+            }
+
+            const name = document.getElementById('name').value;
+            const nameError = document.getElementById('nameError');
+            if (!/^[a-zA-Z\s]+$/.test(name)) {
+                nameError.textContent = "Name must contain only alphabetical characters.";
+                isValid = false;
+            } else {
+                nameError.textContent = "";
+            }
+
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const genderError = document.getElementById('genderError');
+            if (!gender) {
+                genderError.textContent = "Please select a gender.";
+                isValid = false;
+            } else {
+                genderError.textContent = "";
+            }
+
+            const dob = document.getElementById('dob').value;
+            const dobError = document.getElementById('dobError');
+            if (!dob) {
+                dobError.textContent = "Please select your date of birth.";
+                isValid = false;
+            } else {
+                dobError.textContent = "";
+            }
+
+            const course = document.getElementById('courses').value;
+            const courseError = document.getElementById('courseError');
+            if (!course) {
+                courseError.textContent = "Please select a course.";
+                isValid = false;
+            } else {
+                courseError.textContent = "";
+            }
+
+            const skills = [document.getElementById('html'), document.getElementById('css'), document.getElementById('js')];
+            const skillsError = document.getElementById('skillsError');
+            if (!skills.some(skill => skill.checked)) {
+                skillsError.textContent = "Please select at least one skill.";
+                isValid = false;
+            } else {
+                skillsError.textContent = "";
+            }
+
+            // Validate Address
+            const address = document.getElementById('address').value.trim();
+            const addressError = document.getElementById('addressError');
+            if (!address) {
+                addressError.textContent = "Address cannot be empty.";
+                isValid = false;
+            } else {
+                addressError.textContent = "";
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+            }
+            return isValid; 
+        }
+    </script>
+</body>
+</html>

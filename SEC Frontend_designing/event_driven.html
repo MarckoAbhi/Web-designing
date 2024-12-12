@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Event-Driven Programs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input {
+            padding: 8px;
+            margin: 10px 0;
+            width: 200px;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Event-Driven JavaScript Programs</h2>
+
+    <!-- Multiplication Table -->
+    <div>
+        <h3>Multiplication Table</h3>
+        <input type="number" id="num1" placeholder="Enter a number">
+        <button onclick="printTable()">Print Table</button>
+        <div class="output" id="output1"></div>
+    </div>
+
+    <!-- Largest of Three Numbers -->
+    <div>
+        <h3>Largest of Three Numbers</h3>
+        <input type="number" id="num2" placeholder="Enter first number">
+        <input type="number" id="num3" placeholder="Enter second number">
+        <input type="number" id="num4" placeholder="Enter third number">
+        <button onclick="findLargest()">Find Largest</button>
+        <div class="output" id="output2"></div>
+    </div>
+
+    <!-- Factorial -->
+    <div>
+        <h3>Factorial</h3>
+        <input type="number" id="num5" placeholder="Enter a number">
+        <button onclick="calculateFactorial()">Find Factorial</button>
+        <div class="output" id="output3"></div>
+    </div>
+
+    <!-- Sum and Average -->
+    <div>
+        <h3>Sum and Average</h3>
+        <button onclick="calculateSumAndAverage()">Enter Numbers</button>
+        <div class="output" id="output4"></div>
+    </div>
+
+    <script>
+        // 1. Multiplication Table
+        function printTable() {
+            const num = parseInt(document.getElementById('num1').value);
+            let result = `<b>Multiplication Table for ${num}:</b><br>`;
+            for (let i = 1; i <= 10; i++) {
+                result += `${num} x ${i} = ${num * i}<br>`;
+            }
+            document.getElementById('output1').innerHTML = result;
+        }
+
+        // 2. Largest of Three Numbers
+        function findLargest() {
+            const num1 = parseFloat(document.getElementById('num2').value);
+            const num2 = parseFloat(document.getElementById('num3').value);
+            const num3 = parseFloat(document.getElementById('num4').value);
+            const largest = Math.max(num1, num2, num3);
+            document.getElementById('output2').innerHTML = `<b>Largest Number:</b> ${largest}`;
+        }
+
+        // 3. Factorial of a Number
+        function calculateFactorial() {
+            const num = parseInt(document.getElementById('num5').value);
+            let factorial = 1;
+            for (let i = 1; i <= num; i++) {
+                factorial *= i;
+            }
+            document.getElementById('output3').innerHTML = `<b>Factorial of ${num}:</b> ${factorial}`;
+        }
+
+        // 4. Sum and Average of Positive Numbers
+        function calculateSumAndAverage() {
+            let numbers = [];
+            let input;
+        
+            while (numbers.length < 2) {
+                input = prompt(`Enter a positive number (${numbers.length + 1}/2):`);
+        
+                if (input === null) {
+                    alert("Input canceled.");
+                    return;
+                }
+                input = parseFloat(input);
+        
+                if (isNaN(input)) {
+                    alert("Please enter a valid number.");
+                } else if (input > 0) {
+                    numbers.push(input);
+                } else {
+                    alert("Only positive numbers are allowed.");
+                }
+            }
+            const sum = numbers.reduce((total, num) => total + num, 0);
+            const average = sum / numbers.length;
+            document.getElementById('output4').innerHTML =
+                `<b>Numbers Entered:</b> ${numbers.join(', ')}<br>` +
+                `<b>Sum:</b> ${sum}<br>` +
+                `<b>Average:</b> ${average.toFixed(2)}`;
+        }        
+    </script>
+</body>
+</html>
